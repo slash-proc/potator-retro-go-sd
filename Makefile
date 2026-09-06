@@ -87,7 +87,7 @@ pack: $(TARGET_BIN) $(PAD_LOGO) $(HEADER_LOGO)
 	$(V)$(ECHO) [ PACK CORE ] $(PACKED_BIN) version=$(CORE_VERSION)
 	$(V)python3 $(PACK_CORE) \
 		--elf $(TARGET_ELF) --bin $(TARGET_BIN) \
-		--system name="Watara Supervision",dirname=potator,pad_logo=$(PAD_LOGO),header_logo=$(HEADER_LOGO),ext="wsv sv bin",parse=rom \
+		--system name="Watara Supervision",dirname=wsv,pad_logo=$(PAD_LOGO),header_logo=$(HEADER_LOGO),ext="wsv sv bin",parse=rom \
 		--logo-invert \
 		--core-name "Potator" \
 		--version "$(CORE_VERSION)" \

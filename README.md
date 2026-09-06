@@ -3,7 +3,7 @@
 Standalone [Potator](https://github.com/libretro/potator) port for
 [Game & Watch Retro-Go SD](https://github.com/sylverb/game-and-watch-retro-go-sd).
 
-Produces `potator.bin` → `/cores/potator.bin`. ROMs under `/roms/potator/`
+Produces `potator.bin` → `/cores/potator.bin`. ROMs under `/roms/wsv/`
 (`.wsv`, `.sv`, `.bin`).
 
 ## Memory layout

@@ -16,12 +16,7 @@ extern void app_main(uint8_t load_state, uint8_t start_paused, int8_t save_slot)
 
 int main(int argc, char **argv)
 {
-    const char *title =
-#if defined(PROJECT_KIND_HOMEBREW)
-        "Retro-Go Homebrew (host)";
-#else
-        "Retro-Go Core (host)";
-#endif
+    const char *title = "Watara Supervision (host)";
     const char *rom = getenv("HOST_ROM");
 
     if (argc > 1 && argv[1] && argv[1][0])

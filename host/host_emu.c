@@ -836,6 +836,28 @@ void wdog_refresh(void)
     host_maybe_quit();
 }
 
+#include "bilinear.h"
+
+void imlib_draw_image(image_t *dst_img, image_t *src_img, int dst_x_start, int dst_y_start,
+                      int dst_stride, float x_scale, float y_scale, rectangle_t *roi,
+                      int rgb_channel, int alpha, const uint16_t *color_palette,
+                      const uint8_t *alpha_palette, image_hint_t hint,
+                      imlib_draw_row_callback_t callback, void *dst_row_override)
+{
+    (void)dst_img; (void)src_img; (void)dst_x_start; (void)dst_y_start;
+    (void)dst_stride; (void)x_scale; (void)y_scale; (void)roi;
+    (void)rgb_channel; (void)alpha; (void)color_palette; (void)alpha_palette;
+    (void)hint; (void)callback; (void)dst_row_override;
+}
+
+static odroid_display_scaling_t host_scaling = ODROID_DISPLAY_SCALING_FIT;
+static odroid_display_filter_t host_filter = ODROID_DISPLAY_FILTER_OFF;
+
+odroid_display_scaling_t odroid_display_get_scaling_mode(void) { return host_scaling; }
+void odroid_display_set_scaling_mode(odroid_display_scaling_t mode) { host_scaling = mode; }
+odroid_display_filter_t odroid_display_get_filter_mode(void) { return host_filter; }
+void odroid_display_set_filter_mode(odroid_display_filter_t mode) { host_filter = mode; }
+
 void Error_Handler(void) { abort(); }
 void BSOD(BSOD_t fault, uint32_t pc, uint32_t lr)
 {

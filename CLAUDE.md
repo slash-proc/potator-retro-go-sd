@@ -365,7 +365,9 @@ In this repo after a firmware change:
 
 | Path     | Notes                                                                 |
 | -------- | --------------------------------------------------------------------- |
-| `src/main.c` | Shared CORE / GWHB skeleton (`PROJECT_KIND_*`); LCD + audio beep demo |
+| `src/main.c` | Watara Supervision (Potator) core — LCD scale modes + palette menu |
+| `src/potator/` | Vendored Potator emulator sources |
+| `potator_core.ld` | RAM_EMU + ITCM hot segment (m6502 / memory / GPU / sound) |
 
 
 Start from `src/main.c` when placing WRAM / heaps / interpreters; use the

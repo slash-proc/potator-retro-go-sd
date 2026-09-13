@@ -2,7 +2,11 @@
   "systems": {
     "wsv": {
       "shortName": "WSV",
-      "compression": false
+      "compression": false,
+      "runtime": {
+        "savestate": { "supported": true },
+        "save": { "supported": false }
+      }
     }
   }
 }
